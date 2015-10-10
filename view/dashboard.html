@@ -1,0 +1,25 @@
+<div id="developers" ng-controller="dashboardCtrl" ng-init="getdata()">
+				<ul>
+					<li><a ng-click="logout()" href="#">Logout</a></li>
+				</ul>
+
+
+		<div>
+			<h4>Inserting the list </h4>
+			<input type="text" ng-model="name" plceholder="Enter Name">
+			<input type="number" ng-model="age" plceholder="Enter Age">
+			<input type="button" value="postdata" ng-click="post()">
+		</div>
+
+		<div>
+			<h4>The List: </h4>
+			<ul ng-repeat= "x in sample">
+				<li> {{x.name}} is {{x.age}} years old
+				<button ng-click="delete($index)">Delete</button></li>
+			</ul>
+		</div>
+
+
+
+		
+</div>
