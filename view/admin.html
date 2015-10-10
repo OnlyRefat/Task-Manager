@@ -2,5 +2,15 @@
 	<div ng-model="hello">
 		{{hello}}
 	</div>
-
+			<div>
+			<h4>The List: </h4>
+			<ul ng-repeat= "x in tickets">
+				<li> {{x.title}} <button ng-click="assign($index)">Assign</button>
+				</li>
+			</ul>
+			
+		</div>
 </div>
+
+
+
