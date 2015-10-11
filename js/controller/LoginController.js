@@ -22,7 +22,13 @@ Parse.User.logIn($scope.username, $scope.password, {
          	 alert(profile);
 
          	alert(profile.name);
-         	$window.location.href="index.html";
+            if(profile.name=='client')
+         	$window.location.href="index.html#/customer";
+            if(profile.name=='admin')
+            $window.location.href="index.html#/admin";
+            if(profile.name=='developer')
+            $window.location.href="index.html#/developer";
+        
          });
 
         	
