@@ -3,12 +3,26 @@
 		{{hello}}
 	</div>
 			<div>
-			<h4>The List: </h4>
+			<h4>The Ticket List: </h4>
 			<ul ng-repeat= "x in tickets">
 				<li> {{x.title}} <button ng-click="assign($index)">Assign</button>
 				</li>
 			</ul>
 			
+		</div>
+
+		<div>
+			<h4>The Developer list</h4>
+			  <!--select name="role" ng-model="selectbox" >
+                <option ng-value="{{x.id}}" ng-repeat="x in developers">{{x.name}}
+                </option>
+                
+              </select-->
+              <ul ng-repeat= "x in developers">
+				<li> {{x.name}} 
+				</li>
+			</ul> 
+
 		</div>
 </div>
 
