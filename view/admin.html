@@ -6,8 +6,19 @@
 			<h4>The List: </h4>
 			<ul ng-repeat= "x in tickets">
 				<li> {{x.title}} <button ng-click="assign($index)">Assign</button>
+
+					<select>
+                          <option ng-repeat="user in roleUser" value="{{user}}">{{user}}</option>
+        			</select>
+
 				</li>
+
 			</ul>
+
+			<!-- <ul ng-repeat= "user in roleUser">
+				<li> {{user}} <button ng-click="assign($index)">Assign</button>
+				</li>
+			</ul> -->
 			
 		</div>
 </div>
