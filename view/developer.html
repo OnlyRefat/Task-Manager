@@ -1,6 +1,11 @@
 <div id="developers" ng-controller="developerCtrl" ng-init="getdata()">
-	<div ng-model="hello">
-		{{hello}}
-	</div>
+
+			<div>
+			<h4>The List: </h4>
+			<ul ng-repeat= "x in ticket">
+				<li> {{x.title}} : {{x.description}} 
+				<button ng-click="delete($index)">Delete</button></li>
+			</ul>
+		</div>
 
 </div>
