@@ -4,37 +4,22 @@
 	</div>
 			<div>
 			<h4>The Ticket List: </h4>
-			<ul ng-repeat= "x in tickets">
+			<ul ng-repeat= "x in tickets" value="{{x.id}}">
 				<li> {{x.title}} 
 
-					<select>
-                          <option ng-repeat="user in roleUser" value="{{user}}">{{user}}</option>
+					<select ng-model="developerId">
+                          <option ng-repeat="user in roleUser" value="{{user.id}}">{{user.name}}</option>
         			</select>
-        			<button ng-click="assign($index)">Assign</button>
+        			<button ng-click="assign(developerId , x.id )">Assign</button>
 				</li>
 
 			</ul>
 
-			<!-- <ul ng-repeat= "user in roleUser">
-				<li> {{user}} <button ng-click="assign($index)">Assign</button>
-				</li>
-			</ul> -->
+			
 			
 		</div>
 
-		<!-- <div>
-			<h4>The Developer list</h4> -->
-			  <!--select name="role" ng-model="selectbox" >
-                <option ng-value="{{x.id}}" ng-repeat="x in developers">{{x.name}}
-                </option>
-                
-              </select-->
-              <!-- <ul ng-repeat= "x in developers">
-				<li> {{x.name}} 
-				</li>
-			</ul> 
-
-		</div> -->
+		
 </div>
 
 
