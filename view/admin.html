@@ -11,6 +11,7 @@
                           <option ng-repeat="user in roleUser" value="{{user.id}}">{{user.name}}</option>
         			</select>
         			<button ng-click="assign(developerId , x.id )">Assign</button>
+        			<button ng-click="deleteTicket( x.id )">Delete ticket!</button>
 				</li>
 
 			</ul>

@@ -80,5 +80,20 @@ $scope.getdata=function()
 
 	}
 
+	$scope.deleteTicket = function( ticketid ) {
+
+	var DeleteTicket = Parse.Object.extend("Ticket");
+	var query = new Parse.Query(DeleteTicket);
+	query.get(ticketid, {
+	  success: function(myObj) {
+	    myObj.destroy({});
+	  },
+	  error: function(object, error) {
+	  	console.log(error);
+	  }
+	});
+
+	}
+
 
 });

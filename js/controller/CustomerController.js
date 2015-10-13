@@ -9,10 +9,14 @@ newticket= new ticket();
 
 newticket.set('title',$scope.title);
 newticket.set('description',$scope.description);
-newticket.set('owner',Parse.User.current().id)
+newticket.set('owner',Parse.User.current().id);
+
+$scope.title = '';
+$scope.description= '';
 
 newticket.save({success:function(){
 	//$scope.getdata();
+
 	console.log('saved');
 
 }, error:function(error){
@@ -20,10 +24,11 @@ newticket.save({success:function(){
 console.log(error);
 
 }
+
 });
 
 }
-
+	// $scope.title = '';
 
 
 
